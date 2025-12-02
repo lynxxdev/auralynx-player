@@ -1,7 +1,7 @@
 {
   "name": "vynx",
   "version": "1.0.0",
-  "description": "Music Discord Bot",
+  "description": "BOT de discord para músicas",
   "main": "shard.js",
   "author": "moquent",
   "private": true,
