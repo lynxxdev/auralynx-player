@@ -16,19 +16,19 @@ class ShoukakuHandler extends Shoukaku {
         });
 
         this.on('ready', (name, resumed) =>
-            client.logger.log(`LAVALINK => [STATUS] ${name} successfully connected.`, ` ${resumed ? 'Resumed' : 'New'} connection.`)
+            client.logger.log(`LAVALINK => [STATUS] ${name} conectada com sucesso.`, ` ${resumed ? 'Retomada.' : 'Nova'} conexão.`)
         );
 
         this.on('error', (name, error) => {
-            if (!error.toLowerCase().includes("econnrefused")) client.logger.error(chalk.red(`LAVALINK => ${name}: Error Caught.`, error))
+            if (!error.toLowerCase().includes("econnrefused")) client.logger.error(chalk.red(`LAVALINK => ${name}: Erro detectado.`, error))
         });
 
         this.on('close', (name, code, reason) =>
-            client.logger.log(chalk.redBright(`LAVALINK => ${name}: Closed, Code ${code}`, `Reason ${reason || 'No reason'}.`))
+            client.logger.log(chalk.redBright(`LAVALINK => ${name}: Fechado, Código ${code}`, `Motivo ${reason || 'Nenhum motivo'}.`))
         );
 
         this.on('disconnect', (name, players, moved) =>
-            client.logger.log(chalk.yellowBright(`LAVALINK => ${name}: Disconnected`, moved ? 'players have been moved' : 'players have been disconnected'))
+            client.logger.log(chalk.yellowBright(`LAVALINK => ${name}: Desconectado`, moved ? 'jogadores foram movidos' : 'jogadores foram desconectados'))
         );
     }
 }
