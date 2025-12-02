@@ -1,6 +1,6 @@
 {
-  "name": "uzox",
-  "version": "3.0.0",
+  "name": "vynx",
+  "version": "1.0.0",
   "description": "Music Discord Bot",
   "main": "shard.js",
   "author": "moquent",
