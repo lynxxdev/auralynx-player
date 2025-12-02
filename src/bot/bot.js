@@ -39,7 +39,7 @@ client.logger = new (require("../util/logger"))();
 
 initFiles(client);
 
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true }).then(res => console.log("Mongoose connected"));
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true }).then(res => console.log("Mongoose Conectado."));
 
 client.manager = new (require("../../structures/Shoukaku"))(client);
 client.manager.queue = new (require("../../structures/Queue"))(client);
