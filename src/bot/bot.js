@@ -1,7 +1,6 @@
 const TOKEN = process.env.TOKEN;
 const DEFAULT_PREFIX = process.env.DEFAULT_PREFIX || ".";
 const MONGODB_URI = process.env.MONGODB_URI;
-
 const {
   Client,
   Collection,
