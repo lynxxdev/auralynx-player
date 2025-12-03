@@ -1,12 +1,17 @@
 const { ShardingManager } = require("discord.js");
-const config = require("./config/config.json");
+
+// Lê token das Environment Variables
+const TOKEN = process.env.TOKEN;
+
 const shards = new ShardingManager("./src/bot/bot.js", {
-  token: config.TOKEN,
+  token: TOKEN,
   totalShards: "auto",
 });
 
 shards.on("shardCreate", (shard) => {
-  console.log(`[${new Date().toString().split(" ", 5).join(" ")}] Launched shard ${shard.id}`);
+  console.log(
+    `[${new Date().toString().split(" ", 5).join(" ")}] Shard ${shard.id} iniciado.`
+  );
 });
 
-shards.spawn({ timeout: 360000, delay: 1 });
+shards.spawn({ timeout: 360000, delay: 1000 });
