@@ -16,7 +16,7 @@ module.exports = {
                 }
             }
 
-            return message.reply({ embeds: [embedMessage(`${message.member.user} Removidas **${count}** faixas duplicadas da fila``)] });
+            return message.reply({ embeds: [embedMessage(`${message.member.user} Removidas **${count}** faixas duplicadas da fila`)] });
         } catch (err) {
             return message.reply({ embeds: [embedMessage("Opa! Ocorreu um erro ao remover os duplicados, por favor tente novamente.")] });
         }
