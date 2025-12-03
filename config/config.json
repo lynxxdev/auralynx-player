@@ -1,14 +1,13 @@
 {
-    "TOKEN": "",
-    "NAME": "",
+    "TOKEN": "SEU_TOKEN_DO_DISCORD",
+    "NAME": "VYNX",
     "DEFAULT_PREFIX": ".",
     "MONGODB_URI": "",
-    "MICROSERVICES_API": "https://uzox.xyz/api/",
     "LAVALINK_SERVERS": [
         {
-            "name": "name",
-            "url": "ip:port",
-            "auth": "password",
+            "name": "Lavalink1",
+            "url": "IP_DO_LAVALINK:PORTA",
+            "auth": "SENHA_DO_LAVALINK",
             "secure": false
         }
     ]
