@@ -7,7 +7,7 @@ module.exports = {
   async execute(message) {
     const player = message.client.manager.queue.get(message.guild.id);
     if (!message.options?.get("name")?.value && !player?.current)
-      return message.reply({ embeds: [embedMessage("There is nothing playing here to show the lyrics.")], ephemeral: true });
+      return message.reply({ embeds: [embedMessage("Não há nada tocando no momento para mostrar a letra.")], ephemeral: true });
 
     let track, query = message.options?.get("name")?.value ? message.options.get("name").value : player?.current?.info?.title;
     try {
@@ -19,7 +19,7 @@ module.exports = {
 
       return message.reply({ embeds: [lyricsEmbed], content: `${message.member.user}` }).catch((err) => { });
     } catch (err) {
-      return message.reply({ embeds: [embedContent(`No lyrics found for ${query}`)], ephemeral: true }).catch((err) => { });
+      return message.reply({ embeds: [embedContent(`Nenhuma letra encontrada para ${query}.`)], ephemeral: true }).catch((err) => { });
     }
   },
 };
