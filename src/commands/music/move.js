@@ -24,14 +24,14 @@ module.exports = {
             const songlen = player.queue.length;
 
             if (placeNum < 0 || songlen < 1 || songlen < songNum + 1 || songlen < placeNum + 1)
-                return message.reply({ embeds: [embedMessage("Enter valid positions to move the tracks in the queue")], ephemeral: true });
+                return message.reply({ embeds: [embedMessage("Insira posições válidas para mover as faixas na fila.")], ephemeral: true });
 
             const song_move = songstemp[songNum];
             player.queue = array_move(player.queue, songNum, placeNum);
-            return message.reply({ embeds: [embedMessage(`${message.member.user} Moved **${song_move.info.title}** to index **${placeNum + 1}** in the queue`)] });
+            return message.reply({ embeds: [embedMessage(`${message.member.user} Movida **${song_move.info.title}** para a posição **${placeNum + 1}** na fila.`)] });
         } catch (err) {
             console.log(err)
-            return message.reply({ embeds: [embedMessage("Please enter a valid number from the queue.")], ephemeral: true });
+            return message.reply({ embeds: [embedMessage("Por favor, insira um número válido da fila.")], ephemeral: true });
         }
     },
 };
