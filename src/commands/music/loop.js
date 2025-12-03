@@ -9,9 +9,9 @@ module.exports = {
 
         if (message.options?.get("type")?.value == "track" || type == "track") {
             player.repeat = player.repeat == 1 ? 0 : 1;
-            return message.reply({ embeds: [embedMessage(`${message.member.user} Track repeat is now **${player.repeat ? "enabled" : "disabled"}**.`)] });
+            return message.reply({ embeds: [embedMessage(`${message.member.user} A Repetição de faixa agora está **${player.repeat ? "ativada" : "desativada"}**.`)] });
         }
         player.repeat = player.repeat == 2 ? 0 : 2;
-        return message.reply({ embeds: [embedMessage(`${message.member.user} Queue repeat is now **${player.repeat == 2 ? "enabled" : "disabled"}**.`)] });
+        return message.reply({ embeds: [embedMessage(`${message.member.user} A repetição da fila agora está **${player.repeat == 2 ? "ativada" : "desativada"}**.`)] });
     },
 };
