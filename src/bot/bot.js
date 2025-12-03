@@ -39,6 +39,16 @@ initFiles(client);
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true }).then(res => console.log("Mongoose Conectado."));
 
+client.on("ready", async () => {
+    console.log(`${client.user.tag} está online!`);
+    
+    // Limpa todos os comandos globais
+    await client.application.commands.set([]);
+    console.log("Todos os comandos globais foram removidos.");
+});
+
+   
+
 client.manager = new (require("../../structures/Shoukaku"))(client);
 client.manager.queue = new (require("../../structures/Queue"))(client);
 client
