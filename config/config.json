@@ -1,13 +1,12 @@
 {
-    "TOKEN": "SEU_TOKEN_DO_DISCORD",
+    "TOKEN": "${TOKEN}",
     "NAME": "VYNX",
     "DEFAULT_PREFIX": ".",
-    "MONGODB_URI": "",
     "LAVALINK_SERVERS": [
         {
             "name": "Lavalink1",
-            "url": "IP_DO_LAVALINK:PORTA",
-            "auth": "SENHA_DO_LAVALINK",
+            "url": "IP:PORTA",
+            "auth": "SENHA",
             "secure": false
         }
     ]
